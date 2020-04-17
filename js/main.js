@@ -69,12 +69,16 @@ $(document).ready( function()
 function loadPage(file)
 {
     removeMenu();
+    loadAnim();
+
     $.ajax({
         url: `./pages/${file}`,
         method: "GET",
         cache: false,
         success: function(res)
         {
+            removeAnim();
+            
             $("#root").html(res);
             $("html, body").scrollTop(0);
         }
@@ -125,4 +129,12 @@ function getOrder( order )
             $(".by-order").html(res);
         }
     });
+}
+function loadAnim()
+{
+    $(".loading").addClass("loading-active");
+}
+function removeAnim()
+{
+    $(".loading").removeClass("loading-active");
 }
