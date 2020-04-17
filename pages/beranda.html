@@ -39,14 +39,16 @@
 // 		}, 300);
 		$(`.size`).css("background-image",`url(./img/kategori/${category}/size.jpg)`);
 
-		for(let x=0; x < colors.length; x++)
-		{
+// 		for(let x=0; x < colors.length; x++)
+// 		{
 // 			setTimeout(() => 
 // 			{
 // 				$(`.${colors[x]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[x]}.jpg)`);
 // 			}, 300);
-			$(`.${colors[x]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[x]}.jpg)`);
-		}
+			$(`.${colors[0]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[0]}.jpg)`);
+			$(`.${colors[1]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[1]}.jpg)`);
+			$(`.${colors[2]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[2]}.jpg)`);
+// 		}
 		// console.log(colors.length);
 	});
 </script>
