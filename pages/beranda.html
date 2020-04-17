@@ -1,0 +1,51 @@
+<div class="banner"></div>
+
+<!-- By Order -->
+<div class="by-order"></div>
+
+<section>
+   <p>
+      Telephone: 000 <br>
+      Email: 000 <br>
+      No. REK: 000
+    </p>
+</section>
+
+<section style="background: none !important;">
+	<div class="best-seller"></div>
+</section>
+
+<a href="https://wa.me/62816268441?text=Hallo, saya mau pesan kaos *Indonesia Fight Against Covid-19* kak ...
+" class="order-btn">Pesan Sekarang</a>
+
+<script>
+
+	$(document).ready( function()
+	{
+		// Get merch category
+		var category = "";
+		if(window.location.search.substring(1) === "") category = "covid";
+		else category = getUrlParameter("category");
+		// Get order category
+		getOrder( category );
+		// Get colors
+		// var colors = getUrlParameter("colors").split(",");
+		var colors = ["hitam","abuabu","putih"];
+		$(`.banner`).css("background-image",`url(./img/kategori/${category}.jpg)`);
+		
+		setTimeout(() => 
+		{
+			
+			$(`.size`).css("background-image",`url(./img/kategori/${category}/size.jpg)`);
+		}, 300);
+
+		for(let x=0; x < colors.length; x++)
+		{
+			setTimeout(() => 
+			{
+				$(`.${colors[x]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[x]}.jpg)`);
+			}, 300);
+		}
+		// console.log(colors.length);
+	});
+</script>

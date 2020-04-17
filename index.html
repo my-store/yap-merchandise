@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/app.js"></script>
+    <link rel="stylesheet" href="./css/app.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+
+    <div class="goto-top"></div>
+
+    <nav>
+        <h1 onclick="loadPage(`beranda.html`)">YAP Merchandise</h1>
+        <div class="top-links">
+            <a onclick="loadPage(`beranda.html`)" href="">Beranda</a>
+            <a onclick="loadPage(`produk.html`)" href="">Produk</a>
+            <a onclick="loadPage(`layanan.html`)" href="">Layanan</a>
+            <a onclick="loadPage(`kontak.html`)" href="">Kontak</a>
+            <a onclick="loadPage(`tentang.html`)" href="">Tentang</a>
+        </div>
+
+        <div class="burger">
+            <div class="bgr-1"></div>
+            <div class="bgr-2"></div>
+            <div class="bgr-3"></div>
+        </div>
+    </nav>
+
+    <div class="right-menu">
+        <a onclick="loadPage(`beranda.html`)" href="">Beranda</a>
+        <a onclick="loadPage(`produk.html`)" href="">Produk</a>
+        <a onclick="loadPage(`layanan.html`)" href="">Layanan</a>
+        <a onclick="loadPage(`kontak.html`)" href="">Kontak</a>
+        <a onclick="loadPage(`tentang.html`)" href="">Tentang</a>
+    </div>
+    
+    <main id="root">
+        <!-- Load by ajax -->
+    </main>
+
+    <footer>
+        <p class="rbx">
+            Designed by: <br> <small>RBX Family</small> <br>
+            (+62) 823-2241-7953
+        </p>
+    </footer>
+
+</body>
+</html>
