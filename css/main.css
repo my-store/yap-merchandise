@@ -21,6 +21,7 @@
     visibility: hidden;
     opacity: 0;
     transition: 0.30s all ease;
+    z-index: 50;
 }
 .loading-active {
     visibility: visible;
@@ -28,27 +29,56 @@
 }
 .load-1, .load-2, .load-3
 {
+    border-radius: 50%;
     height: 10px;
     width: 10px;
     background: white;
     margin: 5px;
     position: relative;
-    animation: load-anim-1 0.50s inherit;
+    animation-name: load-anim-1;
+    animation-duration: 0.50s;
+    animation-iteration-count: infinite;
+}
+.load-1
+{
+    animation-name: load-anim-1;
 }
 .load-2
 {
-    animation: load-anim-2 0.50s inherit;
+    animation-name: load-anim-2;
 }
 .load-3
 {
-    animation: load-anim-3 0.50s inherit;
+    animation-name: load-anim-3;
 }
 @keyframes load-anim-1 {
     0% {
         top: -0px;
     }
+    10% {
+        top: -20px;
+    }
+    100% {
+        top: -0px;
+    }
+}
+@keyframes load-anim-2 {
+    0% {
+        top: -0px;
+    }
+    30% {
+        top: -20px;
+    }
+    100% {
+        top: -0px;
+    }
+}
+@keyframes load-anim-3 {
+    0% {
+        top: -0px;
+    }
     50% {
-        top: -50px;
+        top: -20px;
     }
     100% {
         top: -0px;
