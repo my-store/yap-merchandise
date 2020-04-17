@@ -33,18 +33,19 @@
 		var colors = ["hitam","abuabu","putih"];
 		$(`.banner`).css("background-image",`url(./img/kategori/${category}.jpg)`);
 		
-		setTimeout(() => 
-		{
-			
-			$(`.size`).css("background-image",`url(./img/kategori/${category}/size.jpg)`);
-		}, 300);
+// 		setTimeout(() => 
+// 		{			
+// 			$(`.size`).css("background-image",`url(./img/kategori/${category}/size.jpg)`);
+// 		}, 300);
+		$(`.size`).css("background-image",`url(./img/kategori/${category}/size.jpg)`);
 
 		for(let x=0; x < colors.length; x++)
 		{
-			setTimeout(() => 
-			{
-				$(`.${colors[x]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[x]}.jpg)`);
-			}, 300);
+// 			setTimeout(() => 
+// 			{
+// 				$(`.${colors[x]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[x]}.jpg)`);
+// 			}, 300);
+			$(`.${colors[x]}`).css("background-image", `url(./img/kategori/${category+"/warna/"+colors[x]}.jpg)`);
 		}
 		// console.log(colors.length);
 	});
